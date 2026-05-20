@@ -1,0 +1,114 @@
+.newsletter {
+  padding: 96px 0;
+  background: linear-gradient(135deg, #FF6B00 0%, #E55A00 40%, #CC4400 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter__bg-blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.07);
+  top: -200px;
+  left: -100px;
+  pointer-events: none;
+}
+.newsletter__bg-blob--2 {
+  top: auto;
+  bottom: -200px;
+  left: auto;
+  right: -100px;
+}
+
+.newsletter__inner {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.newsletter__icon {
+  font-size: 56px;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.newsletter__title {
+  font-size: 38px;
+  font-weight: 800;
+  color: white;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  margin-bottom: 14px;
+}
+
+.newsletter__subtitle {
+  font-size: 16px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.newsletter__form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.newsletter__input {
+  flex: 1;
+  padding: 16px 24px;
+  border-radius: var(--radius-xl);
+  font-size: 15px;
+  background: rgba(255,255,255,0.95);
+  color: var(--text);
+  border: none;
+  outline: none;
+}
+.newsletter__input:focus {
+  background: white;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.4);
+}
+.newsletter__input::placeholder { color: var(--text-muted); }
+
+.newsletter__btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 30px;
+  border-radius: var(--radius-xl);
+  background: var(--secondary);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+.newsletter__btn:hover {
+  background: #2D1E08;
+  transform: translateY(-2px);
+}
+
+.newsletter__note {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+}
+
+.newsletter__success {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: var(--radius-lg);
+  padding: 20px 32px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 640px) {
+  .newsletter { padding: 64px 0; }
+  .newsletter__title { font-size: 26px; }
+  .newsletter__form { flex-direction: column; }
+  .newsletter__btn { justify-content: center; }
+}
